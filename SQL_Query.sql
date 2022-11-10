@@ -19,7 +19,7 @@ CREATE Table Students
 	StudentDOB varchar(20),
 	Phone varchar(10),
 	HomeAddress varchar(100),
-	ImgPath Varbinary(MAX)
+	ImgPath varchar(100)
 );
 CREATE TABLE StudentCourses
 (
