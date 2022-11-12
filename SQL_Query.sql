@@ -112,3 +112,108 @@ Insert Into StudentCourses(StudentNumber,ModCode) VALUES (15, 'DBD281');
 Insert Into StudentCourses(StudentNumber,ModCode) VALUES (16, 'PRG281');
 Insert Into StudentCourses(StudentNumber,ModCode) VALUES (17, 'WPR281');
 GO
+
+
+CREATE PROC spGetStudents
+AS
+BEGIN
+	SELECT * FROM Students;
+END
+GO
+
+CREATE PROC spUpdateStudents
+(
+	@StudentNumber int,
+	@NameSurname VARCHAR(80),
+	@Gender VARCHAR(10),
+	@DOB VARCHAR(20),
+	@Phone VARCHAR(10),
+	@Address VARCHAR(100),
+	@ImgPath VARCHAR(100)
+)
+AS
+BEGIN
+	UPDATE Students 
+	SET NameSurname = @NameSurname, Gender = @Gender, StudentDOB = @DOB, Phone = @Phone, HomeAddress = @Address, ImgPath = @ImgPath 
+	WHERE StudentNumber = @StudentNumber;
+END
+GO
+
+CREATE PROC spDeleteStudents
+(
+	@StudnetNumber int
+)
+AS
+BEGIN
+	DELETE FROM StudentCourses WHERE StudentNumber = @StudnetNumber;
+	DELETE FROM Students WHERE StudentNumber = @StudnetNumber;
+END
+GO
+
+CREATE PROC spDeleteCoursesStudent
+(
+	@CourseCode VARCHAR(10),
+	@StudentNumber int
+)
+AS
+BEGIN
+	DELETE FROM StudentCourses WHERE ModCode = @CourseCode AND StudentNumber = @StudentNumber;
+END
+GO
+
+CREATE PROC spSearchStudents
+(
+	@StudnetNumber int
+)
+AS
+BEGIN
+	SELECT * FROM Students WHERE StudentNumber = @StudnetNumber;
+END
+GO
+
+CREATE PROC spAddStudents
+(
+	@StudentNumber int,
+	@NameSurname VARCHAR(80),
+	@Gender VARCHAR(10),
+	@DOB VARCHAR(20),
+	@Phone VARCHAR(10),
+	@Address VARCHAR(100),
+	@ImgPath VARCHAR(100)
+)
+AS
+BEGIN
+	INSERT INTO Students 
+	VALUES (@StudentNumber, @NameSurname, @Gender, @DOB, @Phone, @Address, @ImgPath);
+END
+GO
+
+CREATE PROC spAddStudentCourses
+(
+	@ModCode VARCHAR(10),
+	@StudentNumber int
+)
+AS
+BEGIN
+	INSERT INTO StudentCourses
+	(StudentNumber, ModCode)
+	VALUES (@StudentNumber, @ModCode);
+END
+GO
+
+CREATE PROC spDeleteJoingCourses
+(
+	@StudnetNumber int
+)
+AS
+BEGIN
+	DELETE FROM StudentCourses WHERE StudentNumber = @StudnetNumber;
+END
+GO
+
+CREATE PROC spGetModCodes
+AS
+BEGIN
+	SELECT ModCode FROM Courses;
+END
+GO
