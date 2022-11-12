@@ -38,7 +38,7 @@ Insert Into Courses(ModCode, ModName, ModDesc, Link) VALUES
 ('DBD281', 'Database Development 281', 'Learning of SQL server and database development.','https://www.w3schools.com/sql/')
 
 Insert Into Students(StudentNumber, NameSurname,Gender, StudentDOB, Phone, HomeAddress,ImgPath) Values
-(1, 'Jake Adams','Male','09-10-2000' , '0711112222','10 Plat Str, Johannesburg','JakeAdams.png');
+(1, 'Jake Adams','Male','09-10-2000' , '0711112222','10 Plat Str, Johannesburg','Student Images\JakeAdams.png');
 Insert Into Students(StudentNumber, NameSurname,Gender, StudentDOB, Phone, HomeAddress,ImgPath) Values
 (2, 'John Doe','Male','04-12-2002' , '0715612782','8 Sims Street, Pretoria','Student Images\JohnDoe.jpg');
 Insert Into Students(StudentNumber, NameSurname,Gender, StudentDOB, Phone, HomeAddress,ImgPath) Values
