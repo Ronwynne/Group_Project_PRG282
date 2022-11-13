@@ -1,0 +1,12 @@
+C:\Users\Enigma\Documents\Belgium\Work\2nd Year\PRG282\PRG282Project\Project\bin\Debug\Project.exe.config
+C:\Users\Enigma\Documents\Belgium\Work\2nd Year\PRG282\PRG282Project\Project\bin\Debug\Project.exe
+C:\Users\Enigma\Documents\Belgium\Work\2nd Year\PRG282\PRG282Project\Project\bin\Debug\Project.pdb
+C:\Users\Enigma\Documents\Belgium\Work\2nd Year\PRG282\PRG282Project\Project\obj\Debug\Project.csproj.AssemblyReference.cache
+C:\Users\Enigma\Documents\Belgium\Work\2nd Year\PRG282\PRG282Project\Project\obj\Debug\Project.frmLogin.resources
+C:\Users\Enigma\Documents\Belgium\Work\2nd Year\PRG282\PRG282Project\Project\obj\Debug\Project.Properties.Resources.resources
+C:\Users\Enigma\Documents\Belgium\Work\2nd Year\PRG282\PRG282Project\Project\obj\Debug\Project.csproj.GenerateResource.cache
+C:\Users\Enigma\Documents\Belgium\Work\2nd Year\PRG282\PRG282Project\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
+C:\Users\Enigma\Documents\Belgium\Work\2nd Year\PRG282\PRG282Project\Project\obj\Debug\Project.exe
+C:\Users\Enigma\Documents\Belgium\Work\2nd Year\PRG282\PRG282Project\Project\obj\Debug\Project.pdb
+C:\Users\Enigma\Documents\Belgium\Work\2nd Year\PRG282\PRG282Project\Project\obj\Debug\Project.frmCourses.resources
+C:\Users\Enigma\Documents\Belgium\Work\2nd Year\PRG282\PRG282Project\Project\obj\Debug\Project.frmMain.resources
