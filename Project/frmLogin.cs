@@ -24,19 +24,20 @@ namespace Project
         {
             pnlLogin.Hide();
             pnlSignUp.Show();
-            txtUsername.Text = "";
-            txtPassword.Text = "";
-            txtNewUsername.Focus();
+            txtNewUsername.Text = "";
+            txtNewPassword.Text = "";
+            txtConfirm.Text = "";
+            txtUsername.Focus();
         }
 
         private void lblSignIn_Click(object sender, EventArgs e)
         {
             pnlSignUp.Hide();
             pnlLogin.Show();
-            txtNewUsername.Text = "";
-            txtNewPassword.Text = "";
-            txtConfirm.Text = "";
-            txtUsername.Focus();
+
+            txtUsername.Text = "";
+            txtPassword.Text = "";
+            txtNewUsername.Focus();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
