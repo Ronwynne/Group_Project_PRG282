@@ -40,7 +40,7 @@
             this.btnSaveStudent = new System.Windows.Forms.Button();
             this.cbxNewStudent = new System.Windows.Forms.CheckBox();
             this.dtpDOB = new System.Windows.Forms.DateTimePicker();
-            this.lbxModCode = new System.Windows.Forms.ComboBox();
+            this.cbxModCode = new System.Windows.Forms.ComboBox();
             this.lbxGender = new System.Windows.Forms.ComboBox();
             this.txtImgPath = new System.Windows.Forms.TextBox();
             this.txtHomeAddress = new System.Windows.Forms.TextBox();
@@ -152,7 +152,7 @@
             // 
             this.txtSearchStudent.Location = new System.Drawing.Point(735, 19);
             this.txtSearchStudent.Name = "txtSearchStudent";
-            this.txtSearchStudent.Size = new System.Drawing.Size(202, 19);
+            this.txtSearchStudent.Size = new System.Drawing.Size(202, 22);
             this.txtSearchStudent.TabIndex = 1;
             // 
             // lblSearchStudent
@@ -161,7 +161,7 @@
             this.lblSearchStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSearchStudent.Location = new System.Drawing.Point(458, 22);
             this.lblSearchStudent.Name = "lblSearchStudent";
-            this.lblSearchStudent.Size = new System.Drawing.Size(201, 13);
+            this.lblSearchStudent.Size = new System.Drawing.Size(240, 16);
             this.lblSearchStudent.TabIndex = 0;
             this.lblSearchStudent.Text = "Search student by student number";
             // 
@@ -171,7 +171,7 @@
             this.gbxStudentData.Controls.Add(this.btnSaveStudent);
             this.gbxStudentData.Controls.Add(this.cbxNewStudent);
             this.gbxStudentData.Controls.Add(this.dtpDOB);
-            this.gbxStudentData.Controls.Add(this.lbxModCode);
+            this.gbxStudentData.Controls.Add(this.cbxModCode);
             this.gbxStudentData.Controls.Add(this.lbxGender);
             this.gbxStudentData.Controls.Add(this.txtImgPath);
             this.gbxStudentData.Controls.Add(this.txtHomeAddress);
@@ -206,7 +206,7 @@
             this.cbxNewStudent.AutoSize = true;
             this.cbxNewStudent.Location = new System.Drawing.Point(133, 21);
             this.cbxNewStudent.Name = "cbxNewStudent";
-            this.cbxNewStudent.Size = new System.Drawing.Size(99, 17);
+            this.cbxNewStudent.Size = new System.Drawing.Size(115, 20);
             this.cbxNewStudent.TabIndex = 14;
             this.cbxNewStudent.Text = "New Student";
             this.cbxNewStudent.UseVisualStyleBackColor = true;
@@ -216,51 +216,51 @@
             this.dtpDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpDOB.Location = new System.Drawing.Point(32, 237);
             this.dtpDOB.Name = "dtpDOB";
-            this.dtpDOB.Size = new System.Drawing.Size(216, 19);
+            this.dtpDOB.Size = new System.Drawing.Size(216, 22);
             this.dtpDOB.TabIndex = 13;
             // 
-            // lbxModCode
+            // cbxModCode
             // 
-            this.lbxModCode.FormattingEnabled = true;
-            this.lbxModCode.Location = new System.Drawing.Point(32, 439);
-            this.lbxModCode.Name = "lbxModCode";
-            this.lbxModCode.Size = new System.Drawing.Size(216, 21);
-            this.lbxModCode.TabIndex = 12;
+            this.cbxModCode.FormattingEnabled = true;
+            this.cbxModCode.Location = new System.Drawing.Point(32, 439);
+            this.cbxModCode.Name = "cbxModCode";
+            this.cbxModCode.Size = new System.Drawing.Size(216, 24);
+            this.cbxModCode.TabIndex = 12;
             // 
             // lbxGender
             // 
             this.lbxGender.FormattingEnabled = true;
             this.lbxGender.Location = new System.Drawing.Point(32, 157);
             this.lbxGender.Name = "lbxGender";
-            this.lbxGender.Size = new System.Drawing.Size(216, 21);
+            this.lbxGender.Size = new System.Drawing.Size(216, 24);
             this.lbxGender.TabIndex = 11;
             // 
             // txtImgPath
             // 
             this.txtImgPath.Location = new System.Drawing.Point(32, 506);
             this.txtImgPath.Name = "txtImgPath";
-            this.txtImgPath.Size = new System.Drawing.Size(216, 19);
+            this.txtImgPath.Size = new System.Drawing.Size(216, 22);
             this.txtImgPath.TabIndex = 10;
             // 
             // txtHomeAddress
             // 
             this.txtHomeAddress.Location = new System.Drawing.Point(32, 370);
             this.txtHomeAddress.Name = "txtHomeAddress";
-            this.txtHomeAddress.Size = new System.Drawing.Size(216, 19);
+            this.txtHomeAddress.Size = new System.Drawing.Size(216, 22);
             this.txtHomeAddress.TabIndex = 9;
             // 
             // txtPhone
             // 
             this.txtPhone.Location = new System.Drawing.Point(32, 307);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(216, 19);
+            this.txtPhone.Size = new System.Drawing.Size(216, 22);
             this.txtPhone.TabIndex = 8;
             // 
             // txtNameSurname
             // 
             this.txtNameSurname.Location = new System.Drawing.Point(32, 92);
             this.txtNameSurname.Name = "txtNameSurname";
-            this.txtNameSurname.Size = new System.Drawing.Size(216, 19);
+            this.txtNameSurname.Size = new System.Drawing.Size(216, 22);
             this.txtNameSurname.TabIndex = 7;
             // 
             // lblGender
@@ -268,7 +268,7 @@
             this.lblGender.AutoSize = true;
             this.lblGender.Location = new System.Drawing.Point(103, 129);
             this.lblGender.Name = "lblGender";
-            this.lblGender.Size = new System.Drawing.Size(48, 13);
+            this.lblGender.Size = new System.Drawing.Size(58, 16);
             this.lblGender.TabIndex = 6;
             this.lblGender.Text = "Gender";
             // 
@@ -277,7 +277,7 @@
             this.lblDOB.AutoSize = true;
             this.lblDOB.Location = new System.Drawing.Point(86, 198);
             this.lblDOB.Name = "lblDOB";
-            this.lblDOB.Size = new System.Drawing.Size(78, 13);
+            this.lblDOB.Size = new System.Drawing.Size(91, 16);
             this.lblDOB.TabIndex = 5;
             this.lblDOB.Text = "Date of birth";
             // 
@@ -286,7 +286,7 @@
             this.lblPhone.AutoSize = true;
             this.lblPhone.Location = new System.Drawing.Point(82, 274);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(90, 13);
+            this.lblPhone.Size = new System.Drawing.Size(109, 16);
             this.lblPhone.TabIndex = 4;
             this.lblPhone.Text = "Phone Number";
             // 
@@ -295,7 +295,7 @@
             this.lblHomeAddress.AutoSize = true;
             this.lblHomeAddress.Location = new System.Drawing.Point(81, 341);
             this.lblHomeAddress.Name = "lblHomeAddress";
-            this.lblHomeAddress.Size = new System.Drawing.Size(88, 13);
+            this.lblHomeAddress.Size = new System.Drawing.Size(110, 16);
             this.lblHomeAddress.TabIndex = 3;
             this.lblHomeAddress.Text = "Home Address";
             // 
@@ -304,7 +304,7 @@
             this.lblModCode.AutoSize = true;
             this.lblModCode.Location = new System.Drawing.Point(92, 414);
             this.lblModCode.Name = "lblModCode";
-            this.lblModCode.Size = new System.Drawing.Size(81, 13);
+            this.lblModCode.Size = new System.Drawing.Size(99, 16);
             this.lblModCode.TabIndex = 2;
             this.lblModCode.Text = "Module Code";
             // 
@@ -313,7 +313,7 @@
             this.lblImgPath.AutoSize = true;
             this.lblImgPath.Location = new System.Drawing.Point(92, 479);
             this.lblImgPath.Name = "lblImgPath";
-            this.lblImgPath.Size = new System.Drawing.Size(71, 13);
+            this.lblImgPath.Size = new System.Drawing.Size(85, 16);
             this.lblImgPath.TabIndex = 1;
             this.lblImgPath.Text = "Image Path";
             // 
@@ -322,7 +322,7 @@
             this.lblNameSurname.AutoSize = true;
             this.lblNameSurname.Location = new System.Drawing.Point(58, 63);
             this.lblNameSurname.Name = "lblNameSurname";
-            this.lblNameSurname.Size = new System.Drawing.Size(117, 13);
+            this.lblNameSurname.Size = new System.Drawing.Size(143, 16);
             this.lblNameSurname.TabIndex = 0;
             this.lblNameSurname.Text = "Name and Surname";
             // 
@@ -385,6 +385,7 @@
             this.btnDeleteStudent.TabIndex = 0;
             this.btnDeleteStudent.Text = "Delete Student";
             this.btnDeleteStudent.UseVisualStyleBackColor = false;
+            this.btnDeleteStudent.Click += new System.EventHandler(this.btnDeleteStudent_Click);
             // 
             // gbxStudentCourses
             // 
@@ -506,7 +507,7 @@
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(1304, 664);
@@ -552,7 +553,7 @@
         private System.Windows.Forms.Label lblModCode;
         private System.Windows.Forms.Label lblImgPath;
         private System.Windows.Forms.DateTimePicker dtpDOB;
-        private System.Windows.Forms.ComboBox lbxModCode;
+        private System.Windows.Forms.ComboBox cbxModCode;
         private System.Windows.Forms.ComboBox lbxGender;
         private System.Windows.Forms.CheckBox cbxNewStudent;
         private System.Windows.Forms.Button btnSaveStudent;

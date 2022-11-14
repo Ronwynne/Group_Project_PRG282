@@ -35,5 +35,10 @@ namespace Project
         {
             Application.Exit();
         }
+
+        private void btnDeleteStudent_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

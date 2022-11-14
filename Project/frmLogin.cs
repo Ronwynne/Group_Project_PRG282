@@ -12,6 +12,9 @@ namespace Project
 {
     public partial class frmLogin : Form
     {
+        Validation val = new Validation();
+        LoginHandler login = new LoginHandler();
+        frmMain main = new frmMain();
         public frmLogin()
         {
             InitializeComponent();
@@ -39,6 +42,52 @@ namespace Project
         private void btnLogin_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
+            bool correct = false;
+
+            bool validated = val.LogInValidation(username, password);
+            if (validated == false)
+            {
+                MessageBox.Show("Please enter all fields");
+            }
+            else
+            {
+                correct = login.Login(username, password);
+            }
+            if (correct == true)
+            {
+                main.Show();
+            }
+            else
+            {
+                MessageBox.Show("The username or password is incorrect, please enter the correct username and password.");
+            }
+        }
+
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            string username = txtNewUsername.Text;  
+            string password = txtNewPassword.Text;
+            string confirm = txtConfirm.Text;
+            string message = "";
+
+           bool flag = val.newUserValidation(username, password, confirm);
+            if (flag == false)
+            {
+                MessageBox.Show("Please enter all fields");
+            }
+            else
+            {
+                message = login.CreateAccount(username, password, confirm);
+            }
+
+            if (message == "Account successfully created")
+            {
+                
+                main.Show();
+            }
+
         }
     }
 }

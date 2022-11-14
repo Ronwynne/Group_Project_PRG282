@@ -10,3 +10,16 @@ C:\Users\Enigma\Documents\Belgium\Work\2nd Year\PRG282\PRG282Project\Project\obj
 C:\Users\Enigma\Documents\Belgium\Work\2nd Year\PRG282\PRG282Project\Project\obj\Debug\Project.pdb
 C:\Users\Enigma\Documents\Belgium\Work\2nd Year\PRG282\PRG282Project\Project\obj\Debug\Project.frmCourses.resources
 C:\Users\Enigma\Documents\Belgium\Work\2nd Year\PRG282\PRG282Project\Project\obj\Debug\Project.frmMain.resources
+C:\Users\Ronwynne\Source\Repos\Group_Project_PRG282\Project\bin\Debug\Project.exe.config
+C:\Users\Ronwynne\Source\Repos\Group_Project_PRG282\Project\bin\Debug\Project.exe
+C:\Users\Ronwynne\Source\Repos\Group_Project_PRG282\Project\bin\Debug\Project.pdb
+C:\Users\Ronwynne\Source\Repos\Group_Project_PRG282\Project\obj\Debug\Project.csproj.AssemblyReference.cache
+C:\Users\Ronwynne\Source\Repos\Group_Project_PRG282\Project\obj\Debug\Project.csproj.SuggestedBindingRedirects.cache
+C:\Users\Ronwynne\Source\Repos\Group_Project_PRG282\Project\obj\Debug\Project.frmCourses.resources
+C:\Users\Ronwynne\Source\Repos\Group_Project_PRG282\Project\obj\Debug\Project.frmLogin.resources
+C:\Users\Ronwynne\Source\Repos\Group_Project_PRG282\Project\obj\Debug\Project.frmMain.resources
+C:\Users\Ronwynne\Source\Repos\Group_Project_PRG282\Project\obj\Debug\Project.Properties.Resources.resources
+C:\Users\Ronwynne\Source\Repos\Group_Project_PRG282\Project\obj\Debug\Project.csproj.GenerateResource.cache
+C:\Users\Ronwynne\Source\Repos\Group_Project_PRG282\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
+C:\Users\Ronwynne\Source\Repos\Group_Project_PRG282\Project\obj\Debug\Project.exe
+C:\Users\Ronwynne\Source\Repos\Group_Project_PRG282\Project\obj\Debug\Project.pdb
