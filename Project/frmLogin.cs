@@ -14,7 +14,6 @@ namespace Project
     {
         Validation val = new Validation();
         LoginHandler login = new LoginHandler();
-        frmMain main = new frmMain();
         public frmLogin()
         {
             InitializeComponent();
@@ -42,7 +41,6 @@ namespace Project
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
             string username = txtUsername.Text;
             string password = txtPassword.Text;
             bool correct = false;
@@ -58,7 +56,7 @@ namespace Project
             }
             if (correct == true)
             {
-                main.Show();
+                this.DialogResult = DialogResult.OK;
             }
             else
             {
@@ -86,7 +84,7 @@ namespace Project
             if (message == "Account successfully created")
             {
                 
-                main.Show();
+                this.DialogResult = DialogResult.OK;
             }
 
         }
