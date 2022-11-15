@@ -66,13 +66,13 @@ namespace Project
             conn.Close();
         }
 
-        public void AddStudentCourse(Student student, Course course)
+        public void AddStudentCourse(Student student, string course)
         {
             cmd.Parameters.Clear();
             commandText = "INSERT INTO StudentCourses (StudentNumber, ModCode) VALUES " + 
                             "(@studentNo, @modCode)";
             cmd.Parameters.Add("@studentNo", SqlDbType.Int).Value = student.StudentNo;
-            cmd.Parameters.Add("@modCode", SqlDbType.Char, 6).Value = course.Code;
+            cmd.Parameters.Add("@modCode", SqlDbType.Char, 6).Value = course;
             cmd.CommandText = commandText;
             conn.Open();
             cmd.ExecuteNonQuery();
@@ -131,7 +131,7 @@ namespace Project
             conn.Close();
         }
 
-        public void Remove(Student student)
+        public void RemoveStudent(int studentID)
         {
             cmd.Parameters.Clear();
             commandText = "DELETE FROM Students " + 
@@ -167,13 +167,13 @@ namespace Project
             conn.Close();
         }
 
-        public void RemoveStudentCourse(Student student, Course course)
+        public void RemoveStudentCourse(int studentID, string course)
         {
             cmd.Parameters.Clear();
             commandText = "DELETE FROM StudentCourses " +
                             "WHERE (StudentNumber = @studentNo) AND (ModCode = @modCode)";
-            cmd.Parameters.Add("@studentNo", SqlDbType.Int).Value = student.StudentNo;
-            cmd.Parameters.Add("@modCode", SqlDbType.Char, 6).Value = course.Code;
+            cmd.Parameters.Add("@studentNo", SqlDbType.Int).Value = studentID;
+            cmd.Parameters.Add("@modCode", SqlDbType.Char, 6).Value = course;
             cmd.CommandText = commandText;
             conn.Open();
             cmd.ExecuteNonQuery();
@@ -244,7 +244,7 @@ namespace Project
             return temp;
         }
 
-        public static List<Student> returnAllStudents()
+        public List<Student> returnAllStudents()
         {
             List<Student> temp = new List<Student>();
             commandText = "SELECT * FROM Students";
@@ -292,5 +292,47 @@ namespace Project
 
             return temp;
         }
+
+        public List<string> returnModCodes()
+        {
+            List<string> modCodes = new List<string>();
+            commandText = "SELECT * FROM Courses";
+            cmd.CommandText = commandText;
+            conn.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                modCodes.Add(reader[0].ToString());
+            }
+            conn.Close();
+
+            return modCodes;
+        }
+
+        public List<Student> returSearchStudents(int StudentID)
+        {
+            List<Student> temp = new List<Student>();
+            commandText = "SELECT * FROM Students WHERE StudentNumber = " + StudentID;
+            cmd.CommandText = commandText;
+            conn.Open();
+            SqlDataReader reader = cmd.ExecuteReader();
+            List<string> rows = new List<string>();
+            while (reader.Read())
+            {
+                rows.Add(reader[0].ToString() + "," + reader[1].ToString() + "," + reader[2].ToString() + "," + reader[3].ToString() +
+                         "," + reader[4].ToString() + "," + reader[5].ToString() + "," + reader[6].ToString() + "," + reader[7].ToString());
+            }
+            conn.Close();
+
+            foreach (string row in rows)
+            {
+                string[] fields = row.Split(',');
+                temp.Add(new Student(int.Parse(fields[0]), fields[1], fields[2], fields[3], DateTime.Parse(fields[4]),
+                        fields[5], fields[6], Encoding.ASCII.GetBytes(fields[7])));
+            }
+
+            return temp;
+        }
+
     }
 }

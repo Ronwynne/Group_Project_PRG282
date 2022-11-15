@@ -62,32 +62,20 @@ namespace Project
             handler.Insert(this);
         }
 
-        public void AddStudentCourse(Course course)
-        {
-            this.studentCourses.Add(course);
+        public void AddStudentCourse(string course)
+        { 
             handler.AddStudentCourse(this, course);
         }
 
-        public void RemoveStudentCourse(Course course)
-        {
-            for (int i = 0; i < studentCourses.Count; i++)
-            {
-                if (studentCourses[i].Code == course.Code)
-                {
-                    studentCourses.RemoveAt(i);
-                    break;
-                }
-            }
-            handler.RemoveStudentCourse(this, course);
-        }
+        
         public void UpdateStudent()
         {
             handler.Update(this);
         }
 
-        public void RemoveStudent()
+        public void Remove(int studentID)
         {
-            handler.Remove(this);
+            handler.RemoveStudent(studentID);
         }
     }
 }

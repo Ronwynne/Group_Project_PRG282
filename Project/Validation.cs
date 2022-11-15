@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace Project
 {
@@ -51,25 +52,9 @@ namespace Project
             }
         }
 
-        public bool studentDataValidation(string studentNumber, string studentNameSurname, string picturePath, string datOfBirth, string Gender, string phoneNumber, string address, List<string> courses)
+        public bool studentDataValidation( int studentID, string studentName, string  Surname,string  gender, DateTime dob, string phone, string address, Byte[] img, string course)
         {
-            foreach (char c in studentNumber)
-            {
-                if (c < '0' || c > '9')
-                {
-                    return false;
-                }
-            }
-
-            foreach (char c in phoneNumber)
-            {
-                if (c < '0' || c > '9')
-                {
-                    return false;
-                }
-            }
-
-            if (studentNumber != string.Empty && studentNameSurname != string.Empty && picturePath != string.Empty && datOfBirth != string.Empty && Gender != string.Empty && phoneNumber != string.Empty && address != string.Empty && courses != null)
+            if (studentID != null && studentName != string.Empty && Surname != string.Empty  && dob != null && gender != string.Empty && phone != string.Empty && address != string.Empty && course != null && img != null)
             {
                 return true;
             }
@@ -92,6 +77,13 @@ namespace Project
             }
         }
 
+        public const string motif = @"^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$";
+
+        public bool IsPhoneNbr(string number)
+        {
+            if (number != null) return Regex.IsMatch(number, motif);
+            else return false;
+        }
 
     }
 }

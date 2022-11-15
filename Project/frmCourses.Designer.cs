@@ -57,7 +57,7 @@
             this.cbxAddResourses = new System.Windows.Forms.CheckBox();
             this.txtCourseResource = new System.Windows.Forms.TextBox();
             this.lblCourseResource = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvCourseResources = new System.Windows.Forms.DataGridView();
             this.btnResourceLast = new System.Windows.Forms.Button();
             this.btnResourceNext = new System.Windows.Forms.Button();
             this.btnResourcePrev = new System.Windows.Forms.Button();
@@ -65,7 +65,7 @@
             this.gbcSearchCourse.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCourses)).BeginInit();
             this.gbxCourseData.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCourseResources)).BeginInit();
             this.SuspendLayout();
             // 
             // gbcSearchCourse
@@ -107,6 +107,7 @@
             this.btnSearchCourses.TabIndex = 2;
             this.btnSearchCourses.Text = "Search";
             this.btnSearchCourses.UseVisualStyleBackColor = false;
+            this.btnSearchCourses.Click += new System.EventHandler(this.btnSearchCourses_Click);
             // 
             // txtSearchCourse
             // 
@@ -178,7 +179,7 @@
             // 
             this.gbxCourseData.BackColor = System.Drawing.SystemColors.ControlDark;
             this.gbxCourseData.Controls.Add(this.btnResourceLast);
-            this.gbxCourseData.Controls.Add(this.dataGridView1);
+            this.gbxCourseData.Controls.Add(this.dgvCourseResources);
             this.gbxCourseData.Controls.Add(this.btnResourceNext);
             this.gbxCourseData.Controls.Add(this.cbxResourseModCode);
             this.gbxCourseData.Controls.Add(this.btnResourcePrev);
@@ -369,15 +370,15 @@
             this.lblCourseResource.Text = "Resource Link";
             this.lblCourseResource.Visible = false;
             // 
-            // dataGridView1
+            // dgvCourseResources
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 21);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(609, 142);
-            this.dataGridView1.TabIndex = 20;
+            this.dgvCourseResources.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCourseResources.Location = new System.Drawing.Point(11, 21);
+            this.dgvCourseResources.Name = "dgvCourseResources";
+            this.dgvCourseResources.RowHeadersWidth = 51;
+            this.dgvCourseResources.RowTemplate.Height = 24;
+            this.dgvCourseResources.Size = new System.Drawing.Size(609, 142);
+            this.dgvCourseResources.TabIndex = 20;
             // 
             // btnResourceLast
             // 
@@ -436,7 +437,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCourses)).EndInit();
             this.gbxCourseData.ResumeLayout(false);
             this.gbxCourseData.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCourseResources)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -473,7 +474,7 @@
         private System.Windows.Forms.TextBox txtCourseResource;
         private System.Windows.Forms.Label lblCourseResource;
         private System.Windows.Forms.Button btnResourceLast;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvCourseResources;
         private System.Windows.Forms.Button btnResourceNext;
         private System.Windows.Forms.Button btnResourcePrev;
         private System.Windows.Forms.Button btnResourceFirst;
