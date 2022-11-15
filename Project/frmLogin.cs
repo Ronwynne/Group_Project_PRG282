@@ -42,7 +42,6 @@ namespace Project
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.OK;
             string username = txtUsername.Text;
             string password = txtPassword.Text;
             bool correct = false;
