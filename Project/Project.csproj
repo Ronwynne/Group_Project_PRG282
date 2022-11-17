@@ -46,39 +46,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Course.cs" />
-    <Compile Include="DataHandler.cs" />
-    <Compile Include="frmCourses.cs">
+    <Compile Include="Business Logic Layer\Course.cs" />
+    <Compile Include="Business Logic Layer\CourseHandler.cs" />
+    <Compile Include="Business Logic Layer\StudentHandler.cs" />
+    <Compile Include="Business Logic Layer\Validator.cs" />
+    <Compile Include="Data Access Layer\DataHandler.cs" />
+    <Compile Include="Presentation Layer\frmCourses.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmCourses.Designer.cs">
+    <Compile Include="Presentation Layer\frmCourses.Designer.cs">
       <DependentUpon>frmCourses.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="Presentation Layer\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
+    <Compile Include="Presentation Layer\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmMain.cs">
+    <Compile Include="Presentation Layer\frmStudents.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmMain.Designer.cs">
-      <DependentUpon>frmMain.cs</DependentUpon>
+    <Compile Include="Presentation Layer\frmStudents.Designer.cs">
+      <DependentUpon>frmStudents.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginHandler.cs" />
+    <Compile Include="Data Access Layer\FileHandler.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Student.cs" />
-    <Compile Include="Validation.cs" />
-    <EmbeddedResource Include="frmCourses.resx">
+    <Compile Include="Business Logic Layer\Student.cs" />
+    <EmbeddedResource Include="Presentation Layer\frmCourses.resx">
       <DependentUpon>frmCourses.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
+    <EmbeddedResource Include="Presentation Layer\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmMain.resx">
-      <DependentUpon>frmMain.cs</DependentUpon>
+    <EmbeddedResource Include="Presentation Layer\frmStudents.resx">
+      <DependentUpon>frmStudents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -102,5 +104,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

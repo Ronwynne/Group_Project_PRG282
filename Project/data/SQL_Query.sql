@@ -177,10 +177,3 @@ Insert Into StudentCourses(StudentNumber,ModCode) VALUES (16, 'PRG281');
 Insert Into StudentCourses(StudentNumber,ModCode) VALUES (17, 'WPR281');
 
 GO
-
-CREATE PROC spGetModCodes
-AS
-BEGIN
-	SELECT ModCode FROM Courses;
-END
-GO
